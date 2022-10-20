@@ -6,7 +6,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
 
-    <title>Contact Us</title>
+    <title>Animation scene</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -29,40 +29,28 @@
     />
   </head>
   <body>
-    @@include('blocks/header.html', {"class": ""})
+    @@include('blocks/header.html', {"class": "header--small"})
     <main>
-      <section class="contacts">
+      <section class="scene">
         <div class="container">
-          <h1 class="title">Contact Us</h1>
-          <nav class="breadcrumbs">
+          <h1 class="title">Animation scene</h1>
+          <nav class="breadcrumbs breadcrumbs--small">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a href="./index.html">Home</a>
               </li>
               <li class="breadcrumbs__item">
-                <a href="./contacts.html">Contact Us</a>
+                <a href="./scene.html">Animation</a>
               </li>
             </ul>
           </nav>
-          <div class="contacts__wrapper">
-            @@include('blocks/form.html')
-            <div class="contacts__info">
-              <p class="info">
-                Our support team are on-hand to assist with any issues you are
-                experiencing.
-              </p>
-              <p class="info">
-                Please use the form to contact us with your needs. Send us a
-                message and we'll respond as soon as possible.
-              </p>
-              <p class="contacts__call">An expert is waiting to help you!</p>
-            </div>
-          </div>
         </div>
+        @@include('blocks/animation.html')
       </section>
     </main>
     @@include('blocks/footer.html')
 
     <script src="js/app.js" defer></script>
+    <script src="js/index.js" defer></script>
   </body>
 </html>
