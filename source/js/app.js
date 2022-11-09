@@ -9,4 +9,16 @@ window.addEventListener("DOMContentLoaded", function () {
   star.addEventListener("mouseout", function () {
     rating.classList.toggle("rating__caption--hovered");
   });
+
+  var mobileMenuButton = document.querySelector(".menu-button");
+  var headerMenu = document.querySelector(".header-menu");
+  var closeMenuButton = document.querySelector(".header-menu__close");
+
+  mobileMenuButton.addEventListener("click", function () {
+    headerMenu.classList.toggle("header-menu--visible");
+  });
+
+  closeMenuButton.addEventListener("click", function () {
+    headerMenu.classList.toggle("header-menu--visible");
+  });
 });

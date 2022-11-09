@@ -31,8 +31,8 @@
   <body>
     @@include('blocks/header.html', {"class": ""})
     <main>
-      <section class="main mb">
-        <div class="container container-column">
+      <section class="main">
+        <div class="container container-column container--responsive">
           <div class="main__background">
             <div class="main__count">
               <span class="count">01</span>
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="main__info">
-              <h1 class="title">THE OOH NOO COLLECTION</h1>
+              <h1 class="title main__title">THE OOH NOO COLLECTION</h1>
               <span class="main__designed">Designed in Slovenia</span>
               @@include('blocks/button.html', { "type": "button", "name":
               "EXPLORE NOW", "class": "popup-button" })
@@ -61,29 +61,153 @@
           <p class="main__offer">
             Free (continental) USA shipping on all orders of $100 USD or more!
           </p>
-          <img
-            src="./img/monster.png"
-            alt="Image: Monster"
-            class="main__banner"
-            width="636"
-            height="490"
-          />
+          <picture class="main__banner">
+            <source
+              srcset="./img/monster.png, ./img/monster-2x.png 2x"
+              width="292"
+              height="226"
+              media="(max-width: 676px)"
+            />
+            <source
+              srcset="./img/monster.png, ./img/monster-2x.png 2x"
+              media="(max-width: 1200px)"
+              width="385"
+              height="286"
+            />
+            <source
+              srcset="./img/monster.png, ./img/monster-2x.png 2x"
+              width="636"
+              height="490"
+            />
+            <img
+              srcset="./img/monster.png"
+              alt="Image: Monster"
+              width="636"
+              height="490"
+            />
+          </picture>
         </div>
       </section>
-      <section class="category mb">
+      <section class="category">
         <div class="container">
           <h2 class="subtitle">Category Products</h2>
           <ul class="category-list category__list">
-            @@include('blocks/category-list.html', { "image":
-            "img/apparel_kids.jpg", "alt-text": "Image: Apparel Kids", "title":
-            "APPAREL KIDS", "link": "#" })
-            @@include('blocks/category-list.html', { "image":
-            "img/holiday_shop.jpg", "alt-text": "Image: Holiday Shop", "title":
-            "HOLIDAY SHOP", "link": "#"}) @@include('blocks/category-list.html',
-            { "image": "img/toys.jpg", "alt-text": "Image: Toys", "title":
-            "TOYS", "link": "toys.html"}) @@include('blocks/category-list.html',
-            { "image": "img/accessories.jpg", "alt-text": "Image: Accessories",
-            "title": "ACCESSORIES", "link": "#" })
+            <li class="category-list__item category__item">
+              <picture class="category-list__image">
+                <source
+                  srcset="./img/apparel_kids.jpg, ./img/apparel_kids-2x.jpg 2x"
+                  width="247"
+                  height="238"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/apparel_kids.jpg, ./img/apparel_kids-2x.jpg 2x"
+                  media="(max-width: 992px)"
+                  width="258"
+                  height="249"
+                />
+                <source
+                  srcset="./img/apparel_kids.jpg, ./img/apparel_kids-2x.jpg 2x"
+                  width="280"
+                  height="270"
+                />
+                <img
+                  srcset="./img/apparel_kids.jpg"
+                  alt="Image: Apparel Kids"
+                  width="280"
+                  height="270"
+                />
+              </picture>
+              <a href="#"> <h4 class="groups">APPAREL KIDS</h4></a>
+            </li>
+            <li
+              class="category-list__item category__item category__item--cutted-too"
+            >
+              <picture class="category-list__image">
+                <source
+                  srcset="./img/holiday_shop.jpg, ./img/holiday_shop-2x.jpg 2x"
+                  width="247"
+                  height="238"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/holiday_shop.jpg, ./img/holiday_shop-2x.jpg 2x"
+                  media="(max-width: 992px)"
+                  width="258"
+                  height="249"
+                />
+                <source
+                  srcset="./img/holiday_shop.jpg, ./img/holiday_shop-2x.jpg 2x"
+                  width="280"
+                  height="270"
+                />
+                <img
+                  srcset="./img/holiday_shop.jpg"
+                  alt="Image: Holiday Shop"
+                  width="280"
+                  height="270"
+                />
+              </picture>
+              <a href="#"> <h4 class="groups">HOLIDAY SHOP</h4></a>
+            </li>
+            <li
+              class="category-list__item category__item category__item--cutted"
+            >
+              <picture class="category-list__image">
+                <source
+                  srcset="./img/toys.jpg, ./img/toys-2x.jpg 2x"
+                  width="247"
+                  height="238"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/toys.jpg, ./img/toys-2x.jpg 2x"
+                  media="(max-width: 992px)"
+                  width="258"
+                  height="249"
+                />
+                <source
+                  srcset="./img/toys.jpg, ./img/toys-2x.jpg 2x"
+                  width="280"
+                  height="270"
+                />
+                <img
+                  srcset="./img/toys.jpg"
+                  alt="Image: Toys"
+                  width="280"
+                  height="270"
+                />
+              </picture>
+              <a href="toys.html"> <h4 class="groups">Toys</h4></a>
+            </li>
+            <li class="category-list__item category__item">
+              <picture class="category-list__image">
+                <source
+                  srcset="./img/accessories.jpg, ./img/accessories-2x.jpg 2x"
+                  width="247"
+                  height="238"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/accessories.jpg, ./img/accessories-2x.jpg 2x"
+                  media="(max-width: 992px)"
+                  width="258"
+                  height="249"
+                />
+                <source
+                  srcset="./img/accessories.jpg, ./img/accessories-2x.jpg 2x"
+                  width="280"
+                  height="270"
+                />
+                <img
+                  srcset="./img/accessories.jpg"
+                  alt="Image: Accessories"
+                  width="280"
+                  height="270"
+                />
+              </picture>
+              <a href="#"> <h4 class="groups">ACCESSORIES</h4></a>
+            </li>
           </ul>
           <div class="category__arrows">
             <div class="arrows">
@@ -107,18 +231,42 @@
           </div>
         </div>
       </section>
-      <section class="delivery mb">
+      <section class="delivery">
         <div class="container">
           <div class="delivery__wrapper">
-            <img
-              src="./img/delivery.jpg"
-              alt="Image: Delivery"
-              class="delivery__image"
-              width="480"
-              height="559"
-            />
+            <picture class="delivery__image">
+              <source
+                srcset="
+                  ./img/delivery_mobile.jpg,
+                  ./img/delivery_mobile-2x.jpg 2x
+                "
+                width="335"
+                height="357"
+                media="(max-width: 676px)"
+              />
+              <source
+                srcset="
+                  ./img/delivery_tablet.jpg,
+                  ./img/delivery_tablet-2x.jpg 2x
+                "
+                media="(max-width: 992px)"
+                width="258"
+                height="512"
+              />
+              <source
+                srcset="./img/delivery.jpg, ./img/delivery-2x.jpg 2x"
+                width="480"
+                height="559"
+              />
+              <img
+                srcset="./img/delivery.jpg"
+                alt="Image: Delivery"
+                width="480"
+                height="559"
+              />
+            </picture>
             <div class="delivery__info">
-              <h2 class="subtitle shift">Delivery</h2>
+              <h2 class="subtitle">Delivery</h2>
               <ul class="delivery__list">
                 <li>
                   <h3 class="italic delivery__title delivery__title--checked">
@@ -126,13 +274,13 @@
                   </h3>
                 </li>
                 <li>
-                  <h3 class="italic delivery__title shift">Guarantee</h3>
+                  <h3 class="italic delivery__title">Guarantee</h3>
                 </li>
                 <li>
-                  <h3 class="italic delivery__title shift">Credit</h3>
+                  <h3 class="italic delivery__title">Credit</h3>
                 </li>
               </ul>
-              <div class="delivery__text shift">
+              <div class="delivery__text">
                 <p class="info">
                   Some days i feel like i've been working on dlk my entire life
                   and there are other days that i am completely shocked that
@@ -145,55 +293,131 @@
                   with to thank!
                 </p>
               </div>
-              <a href="#" class="button shift">LEARN MORE</a>
+              <a href="#" class="button">LEARN MORE</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="awards mb">
+      <section class="awards">
         <div class="container">
           <h2 class="hidden">Awards</h2>
           <ul class="awards-list">
-            <li>
-              <img
-                src="./img/mailru.png"
-                alt="Image: Mail Ru"
-                width="193"
-                height="60"
-              />
+            <li class="awards__mail">
+              <picture>
+                <source
+                  srcset="./img/mailru.png, ./img/mailru-2x.png 2x"
+                  width="131"
+                  height="42"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/mailru.png, ./img/mailru-2x.png 2x"
+                  media="(max-width: 992px)"
+                  width="106"
+                  height="33"
+                />
+                <source
+                  srcset="./img/mailru.png, ./img/mailru-2x.png 2x"
+                  width="193"
+                  height="60"
+                />
+                <img
+                  srcset="./img/mailru.png"
+                  alt="Image: Mail Ru"
+                  width="193"
+                  height="60"
+                />
+              </picture>
             </li>
-            <li>
-              <img
-                src="./img/apple.png"
-                alt="Image: Apple"
-                width="179"
-                height="61"
-              />
+            <li class="awards__apple">
+              <picture>
+                <source
+                  srcset="./img/apple.png, ./img/apple-2x.png 2x"
+                  width="109"
+                  height="38"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/apple.png, ./img/apple-2x.png 2x"
+                  media="(max-width: 992px)"
+                  width="98"
+                  height="34"
+                />
+                <source
+                  srcset="./img/apple.png, ./img/apple-2x.png 2x"
+                  width="179"
+                  height="61"
+                />
+                <img
+                  srcset="./img/apple.png"
+                  alt="Image: Apple"
+                  width="179"
+                  height="61"
+                />
+              </picture>
             </li>
-            <li>
-              <img
-                src="./img/eltex.png"
-                alt="Image: Eltex"
-                width="216"
-                height="46"
-              />
+            <li class="awards__eltex">
+              <picture>
+                <source
+                  srcset="./img/eltex.png, ./img/eltex-2x.png 2x"
+                  width="149"
+                  height="32"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/eltex.png, ./img/eltex-2x.png 2x"
+                  media="(max-width: 992px)"
+                  width="119"
+                  height="25"
+                />
+                <source
+                  srcset="./img/eltex.png, ./img/eltex-2x.png 2x"
+                  width="216"
+                  height="46"
+                />
+                <img
+                  srcset="./img/eltex.png"
+                  alt="Image: Eltex"
+                  width="216"
+                  height="46"
+                />
+              </picture>
             </li>
-            <li>
-              <img
-                src="./img/owox.png"
-                alt="Image: Owox"
-                width="211"
-                height="40"
-              />
+            <li class="awards__owox">
+              <picture>
+                <source
+                  srcset="./img/owox.png, ./img/owox-2x.png 2x"
+                  width="143"
+                  height="26"
+                  media="(max-width: 676px)"
+                />
+                <source
+                  srcset="./img/owox.png, ./img/owox-2x.png 2x"
+                  media="(max-width: 992px)"
+                  width="116"
+                  height="22"
+                />
+                <source
+                  srcset="./img/owox.png, ./img/owox-2x.png 2x"
+                  width="211"
+                  height="40"
+                />
+                <img
+                  srcset="./img/eltex.png"
+                  alt="Image: Owox"
+                  width="211"
+                  height="40"
+                />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
-      <div class="container">
+      <div class="container container--responsive">
         <div class="about-wrapper">
           <section class="design">
             <h2 class="subtitle subtitle--up">Design Life Kids</h2>
-            <span class="italic">About Us</span>
+            <span class="italic design__title">About Us</span>
             <p class="info design__info">
               Some days i feel like i've been working on dlk my entire life and
               there are other days that i am completely shocked that four years
@@ -202,9 +426,9 @@
             <a href="#" class="button">buy now</a>
           </section>
           <section class="contact">
-            <div class="contact__info">
+            <div class="contact__block">
               <h2 class="subtitle subtitle--up">Contacts</h2>
-              <p class="info">
+              <p class="info contact__info">
                 Some days i feel like i've been working on dlk my entire life
                 and there are other days that i am completely shocked that four
                 years have flown by. It's simply magical.
@@ -232,7 +456,7 @@
       <!-- -->
       <div class="popup__dialog">
         <button class="close-button popup__close">
-          <svg class="close-button__icon" width="25" height="25">
+          <svg class="close-button__icon" width="15" height="15">
             <title>Icon: Close Button</title>
             <use xlink:href="./img/sprite.svg#close"></use>
           </svg>
